@@ -1,12 +1,12 @@
-import Fastify, { FastifyInstance } from "fastify";
+import Fastify, { FastifyInstance } from 'fastify';
 
 const fastify: FastifyInstance = Fastify({ logger: true });
 
-const HOST = "0.0.0.0";
+const HOST = '0.0.0.0';
 const PORT = 3000;
 
-fastify.get("/", async (_, reply) => {
-  reply.send({ hello: "world" });
+fastify.get('/', async (_, reply) => {
+  reply.send({ hello: 'world' });
 });
 
 const start = async () => {
