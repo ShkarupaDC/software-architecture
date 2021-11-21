@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./build",
+    "baseUrl": "./",
+    "typeRoots": ["./@types"],
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@plugins/*": ["./src/plugins/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@libs/*": ["./src/libs/*"],
+      "@config/*": ["./src/config/*"],
+      "@shared/*": ["../shared/*"],
+    },
+    "plugins": [
+      { "transform": "typescript-is/lib/transform-inline/transformer" }
+    ],
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}

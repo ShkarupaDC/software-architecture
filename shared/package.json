@@ -1,0 +1,13 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.24.0",
+    "http-errors": "^1.8.1",
+    "knex": "^0.95.14"
+  },
+  "devDependencies": {
+    "@types/http-errors": "^1.8.1"
+  }
+}
