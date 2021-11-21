@@ -1,8 +1,8 @@
 import { DBConnection } from '@shared/interfaces/db/connection';
 import { Item } from '@shared/interfaces/domain/item';
-import { SearchQuery } from '@src/interfaces/domain/search-query';
-import { Builder } from '@libs/db/builder';
-import { Director } from '@src/libs/db/director';
+import { SearchQuery } from '@shared/interfaces/search/search-query';
+import { Builder } from '@shared/libs/db/where-builder/builder';
+import { Director } from '@shared/libs/db/where-builder/director';
 
 export class ItemDao {
   constructor(private db: DBConnection) {}

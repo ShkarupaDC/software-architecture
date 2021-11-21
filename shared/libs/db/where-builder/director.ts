@@ -1,8 +1,7 @@
 import { Builder } from './builder';
-import {
-  NumberQueryParams,
-  StringQueryParams,
-} from '@interfaces/domain/query-params';
+
+import { NumberQueryParams } from '../../../interfaces/search/number-query-params';
+import { StringQueryParams } from '../../../interfaces/search/string-query-params';
 
 export class Director {
   constructor(private builder: Builder) {}

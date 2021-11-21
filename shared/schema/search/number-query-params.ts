@@ -1,9 +1,8 @@
-export const queryParams = {
+export const numberQueryParams = {
   type: 'object',
   properties: {
     min: { type: 'number', minimum: 0 },
-    max: { type: 'number' },
-    contains: { type: 'string' },
+    max: { type: 'number', minimum: 0 },
   },
   additionalProperties: false,
 };

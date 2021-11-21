@@ -1,5 +1,5 @@
 import { FastifyPluginAsync } from 'fastify';
-import { SearchQuery } from '@interfaces/domain/search-query';
+import { SearchQuery } from '@shared/interfaces/search/search-query';
 
 import { query } from '@schema/search/query';
 import { itemList } from '@schema/domain/item-list';
