@@ -3,16 +3,14 @@
   "compilerOptions": {
     "outDir": "./build",
     "baseUrl": "./",
-    "typeRoots": ["./@types"],
+    // "typeRoots": ["./@types"],
     "paths": {
       "@src/*": ["./src/*"],
       "@plugins/*": ["./src/plugins/*"],
       "@interfaces/*": ["./src/interfaces/*"],
-      "@libs/*": ["./src/libs/*"],
       "@config/*": ["./src/config/*"],
-      "@schema/*": ["./src/schema/*"],
       "@shared/*": ["../shared/*"],
-    }
+    },
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "build"]

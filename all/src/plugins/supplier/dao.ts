@@ -7,7 +7,7 @@ export class ItemDao {
 
   async getItem(id: number): Promise<Item | undefined> {
     const record = await this.db
-      .table<Item>('dishes')
+      .table<Item>('items')
       .select('*')
       .where({ id })
       .first();
@@ -16,7 +16,7 @@ export class ItemDao {
 
   async getPriceList(): Promise<PriceListItem[]> {
     const records = await this.db
-      .table<PriceListItem>('dishes')
+      .table<PriceListItem>('items')
       .select('id', 'name', 'price');
     return records;
   }

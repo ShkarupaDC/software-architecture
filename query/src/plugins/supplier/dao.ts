@@ -8,7 +8,7 @@ export class ItemDao {
   constructor(private db: DBConnection) {}
 
   private buildQuery(query: SearchQuery): string {
-    const baseQuery = this.db.select().table('dishes');
+    const baseQuery = this.db.select().table('items');
 
     const builder = new Builder(baseQuery);
     const director = new Director(builder);

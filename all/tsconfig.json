@@ -9,6 +9,7 @@
       "@plugins/*": ["./src/plugins/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@config/*": ["./src/config/*"],
+      "@schema/*": ["./src/schema/*"],
       "@shared/*": ["../shared/*"],
     }
   },

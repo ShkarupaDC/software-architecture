@@ -1,6 +1,8 @@
 import { FastifyPluginAsync } from 'fastify';
 import { SearchQuery } from '@interfaces/domain/search-query';
-import { querystring } from './schema';
+
+import { query } from '@schema/search/query';
+import { itemList } from '@schema/domain/item-list';
 
 export const routes: FastifyPluginAsync = async (fastify) => {
   const { itemService } = fastify;
@@ -8,7 +10,10 @@ export const routes: FastifyPluginAsync = async (fastify) => {
   fastify.route<{ Querystring: SearchQuery }>({
     method: 'GET',
     url: '/search',
-    schema: { querystring },
+    schema: {
+      querystring: query,
+      response: { 200: itemList },
+    },
     handler: async (request, reply) => {
       const { query } = request;
       const items = await itemService.getItemsByQuery(query);

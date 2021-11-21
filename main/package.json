@@ -1,0 +1,20 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "main": "./build/main/src/server.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "pre-build": "rm -rf build",
+    "build": "yarn pre-build && yarn tsc -p tsconfig.json",
+    "start": "node -r ts-node/register -r tsconfig-paths/register ./build/main/src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.24.0",
+    "fastify-autoload": "^3.9.0",
+    "fastify-plugin": "^3.0.0",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1"
+  }
+}

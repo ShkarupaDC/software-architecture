@@ -1,9 +1,9 @@
 import { Knex } from 'knex';
 
 export async function seed(knex: Knex): Promise<void> {
-  await knex('dishes').del();
+  await knex('items').del();
 
-  await knex('dishes').insert([
+  await knex('items').insert([
     {
       name: 'Chocolate Bar',
       price: 20,
@@ -29,32 +29,6 @@ export async function seed(knex: Knex): Promise<void> {
       name: 'Roast Halibut & Green Sauce',
       price: 52.5,
       description: 'Braised chicory, parsley, pepper, onion & eucalyptus',
-    },
-    {
-      name: 'Duck & Turnip',
-      price: 50,
-      description: 'Buttered black turnip, turnip cream, truffle',
-    },
-    {
-      name: 'Black Foot Pork Chop',
-      price: 54.5,
-      description: 'Barley, mushroom, apple & Robert sauce',
-    },
-    {
-      name: 'Fillet of Hereford Beef',
-      price: 62,
-      description: 'Mushroom ketchup & triple cooked chips',
-    },
-    {
-      name: 'British Cheese',
-      price: 22,
-      description:
-        'Apple & plum chutney, fig & perry cheese, oat cakes & seeded crackers',
-    },
-    {
-      name: 'Rice and Flesh',
-      price: 26.5,
-      description: 'Saffron, beef cheek & red wine',
     },
     {
       name: 'Salamagundy',
