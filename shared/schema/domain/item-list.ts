@@ -1,4 +1,4 @@
-import { detailedItem } from '@shared/schema/domain/detailed-item';
+import { detailedItem } from './detailed-item';
 
 export const itemList = {
   type: 'object',

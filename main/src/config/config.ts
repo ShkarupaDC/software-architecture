@@ -2,6 +2,7 @@ import 'dotenv/config';
 
 import { ServerConfig } from '@shared/interfaces/config/server';
 import { DBConfig } from '@shared/interfaces/config/db';
+import { SuppliersConfig } from '@config/interfaces/suppliers.config';
 
 export const config = {
   server: {
@@ -16,4 +17,8 @@ export const config = {
     password: process.env.PG_PASSWORD,
     database: process.env.PG_DB,
   } as DBConfig,
+  suppliers: {
+    allUrl: process.env.ALL_URL,
+    queryUrl: process.env.QUERY_URL,
+  } as SuppliersConfig,
 };

@@ -5,11 +5,24 @@ import { Builder } from '@shared/libs/db/where-builder/builder';
 import { Director } from '@shared/libs/db/where-builder/director';
 import { Knex } from 'knex';
 
-export class ItemDao {
+export class MainDao {
   constructor(private db: DBConnection) {}
 
   private getBaseQuery(): Knex.QueryBuilder {
-    return this.db.select().table('items');
+    const subQuery = this.db
+      .select(
+        'items.id as id',
+        'items.name as name',
+        'items.description as description',
+        'menu_items.price as price'
+      )
+      .from('items')
+      .join('menu_items', 'items.id', 'menu_items.item_id')
+      .join('menus', 'menu_items.menu_id', 'menus.id')
+      .where('menus.date', '=', this.db.raw('current_date'))
+      .as('items');
+    const baseQuery = this.db.select().from(subQuery);
+    return baseQuery;
   }
 
   private buildQuery(query: SearchQuery): string {

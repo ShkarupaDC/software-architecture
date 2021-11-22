@@ -8,9 +8,6 @@ export class ItemService {
 
   async getItemsByQuery(query: SearchQuery): Promise<{ items: Item[] }> {
     const items = await this.dao.getItemsByQuery(query);
-    if (!items.length) {
-      throw new EntityNotFound('There are no items that match query');
-    }
     return { items };
   }
 }

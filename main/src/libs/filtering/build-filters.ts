@@ -1,11 +1,11 @@
 import { SearchQuery } from '@shared/interfaces/search/search-query';
-import { ParamType } from '../interfaces/param-type';
-import { ContainsSpecification } from '../specification/contains.specification';
-import { MaxSpecification } from '../specification/max.specification';
-import { MinSpecification } from '../specification/min.specification';
-import { FilterMap } from '../interfaces/filter-map';
-import { SpecificationMap } from '../interfaces/specification-map';
-import { Specification } from '../specification/model/specification';
+import { ParamType } from '@libs/filtering/interfaces/param-type';
+import { ContainsSpecification } from '@libs/filtering/specification/contains.specification';
+import { MaxSpecification } from '@libs/filtering/specification/max.specification';
+import { MinSpecification } from '@libs/filtering/specification/min.specification';
+import { FilterMap } from '@libs/filtering/interfaces/filter-map';
+import { SpecificationMap } from '@libs/filtering/interfaces/specification-map';
+import { Specification } from '@libs/filtering/specification/model/specification';
 
 const mapping: SpecificationMap = {
   min: MinSpecification,

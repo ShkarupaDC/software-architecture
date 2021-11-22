@@ -8,7 +8,6 @@
       "@src/*": ["./src/*"],
       "@plugins/*": ["./src/plugins/*"],
       "@config/*": ["./src/config/*"],
-      "@schema/*": ["./src/schema/*"],
       "@shared/*": ["../shared/*"],
     }
   },

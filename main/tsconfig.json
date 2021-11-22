@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./build",
     "baseUrl": "./",
-    // "typeRoots": ["./@types"],
+    "typeRoots": ["./@types"],
     "paths": {
       "@src/*": ["./src/*"],
       "@plugins/*": ["./src/plugins/*"],

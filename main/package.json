@@ -15,6 +15,12 @@
     "fastify-autoload": "^3.9.0",
     "fastify-plugin": "^3.0.0",
     "knex": "^0.95.14",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "qs": "^6.10.1",
+    "undici": "^4.10.2"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.6.1",
+    "@types/qs": "^6.9.7"
   }
 }
