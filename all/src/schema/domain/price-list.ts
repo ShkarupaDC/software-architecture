@@ -1,11 +1,11 @@
-import { item } from '@shared/schema/domain/item';
+import { itemSchema } from '@shared/schema/domain/item';
 
-export const priceList = {
+export const priceListSchema = {
   type: 'object',
   properties: {
     priceList: {
       type: 'array',
-      items: item,
+      items: itemSchema,
       uniqueItems: true,
     },
   },

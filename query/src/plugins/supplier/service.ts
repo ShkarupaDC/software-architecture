@@ -1,5 +1,4 @@
 import { Item } from '@shared/interfaces/domain/item';
-import { EntityNotFound } from '@shared/libs/errors/custom-errors';
 import { SearchQuery } from '@shared/interfaces/search/search-query';
 import { ItemDao } from './dao';
 

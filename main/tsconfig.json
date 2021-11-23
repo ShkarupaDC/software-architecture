@@ -10,6 +10,7 @@
       "@interfaces/*": ["./src/interfaces/*"],
       "@config/*": ["./src/config/*"],
       "@libs/*": ["./src/libs/*"],
+      "@schema/*": ["./src/schema/*"],
       "@shared/*": ["../shared/*"],
     },
   },

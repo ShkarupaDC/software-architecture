@@ -1,12 +1,12 @@
-import { numberQueryParams } from './number-query-params';
-import { stringQueryParams } from './string-query-params';
+import { numberQueryParamsSchema } from './number-query-params';
+import { stringQueryParamsSchema } from './string-query-params';
 
-export const query = {
+export const querySchema = {
   type: 'object',
   properties: {
-    name: stringQueryParams,
-    price: numberQueryParams,
-    description: stringQueryParams,
+    name: stringQueryParamsSchema,
+    price: numberQueryParamsSchema,
+    description: stringQueryParamsSchema,
   },
   additionalProperties: false,
 };

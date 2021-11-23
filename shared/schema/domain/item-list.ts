@@ -1,11 +1,11 @@
-import { detailedItem } from './detailed-item';
+import { detailedItemSchema } from './detailed-item';
 
-export const itemList = {
+export const itemListSchema = {
   type: 'object',
   properties: {
     items: {
       type: 'array',
-      items: detailedItem,
+      items: detailedItemSchema,
       uniqueItems: true,
     },
   },

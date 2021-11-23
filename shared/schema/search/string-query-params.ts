@@ -1,4 +1,4 @@
-export const stringQueryParams = {
+export const stringQueryParamsSchema = {
   type: 'object',
   properties: {
     contains: { type: 'string' },

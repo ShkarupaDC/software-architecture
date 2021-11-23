@@ -5,7 +5,7 @@ export const applyFilters = (items: Item[], filters: FilterMap): Item[] => {
   const fields = Object.keys(filters) as (keyof Item)[];
   const filteredItems = items.filter((item) => {
     return fields.every((field) =>
-      filters[field]?.isSatisfiedBy(item[field] as any)
+      filters[field]?.isSatisfiedBy(item[field] as string | number)
     );
   });
   return filteredItems;

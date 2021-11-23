@@ -1,4 +1,4 @@
-export const item = {
+export const itemSchema = {
   type: 'object',
   properties: {
     id: { type: 'integer', minimum: 0 },

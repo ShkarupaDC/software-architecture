@@ -1,4 +1,4 @@
-export const numberQueryParams = {
+export const numberQueryParamsSchema = {
   type: 'object',
   properties: {
     min: { type: 'number', minimum: 0 },

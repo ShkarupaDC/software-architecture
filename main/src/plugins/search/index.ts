@@ -7,7 +7,7 @@ import { AllService } from './all.service';
 import { QueryService } from './query.service';
 import { MainDao } from './dao';
 
-const supplier: FastifyPluginAsync = async (fastify) => {
+const search: FastifyPluginAsync = async (fastify) => {
   const dao = new MainDao(fastify.db);
   const allService = new AllService();
   const queryService = new QueryService();
@@ -17,4 +17,4 @@ const supplier: FastifyPluginAsync = async (fastify) => {
   fastify.register(routes);
 };
 
-export default fp(supplier, { name: 'service', dependencies: ['db'] });
+export default fp(search, { name: 'search', dependencies: ['db'] });

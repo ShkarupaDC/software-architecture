@@ -25,14 +25,30 @@ export async function up(knex: Knex): Promise<void> {
     table.decimal('units_in_stock').notNullable();
   });
   await knex.schema.createTable('item_products', (table: Knex.TableBuilder) => {
-    table.integer('item_id').notNullable().references('items.id');
-    table.integer('product_id').notNullable().references('products.id');
+    table
+      .integer('item_id')
+      .notNullable()
+      .references('items.id')
+      .onDelete('cascade');
+    table
+      .integer('product_id')
+      .notNullable()
+      .references('products.id')
+      .onDelete('cascade');
     table.decimal('quantity').notNullable();
     table.primary(['item_id', 'product_id']);
   });
   await knex.schema.createTable('menu_items', (table: Knex.TableBuilder) => {
-    table.integer('menu_id').notNullable().references('menus.id');
-    table.integer('item_id').notNullable().references('items.id');
+    table
+      .integer('menu_id')
+      .notNullable()
+      .references('menus.id')
+      .onDelete('cascade');
+    table
+      .integer('item_id')
+      .notNullable()
+      .references('items.id')
+      .onDelete('cascade');
     table.decimal('price', 15, 4).notNullable();
     table.primary(['menu_id', 'item_id']);
   });
