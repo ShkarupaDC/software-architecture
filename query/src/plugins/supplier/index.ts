@@ -13,4 +13,8 @@ const supplier: FastifyPluginAsync = async (fastify) => {
   fastify.register(routes);
 };
 
-export default fp(supplier, { name: 'supplier', dependencies: ['db'] });
+export default fp(supplier, {
+  name: 'supplier',
+  decorators: { fastify: ['db'] },
+  dependencies: ['db'],
+});

@@ -1,5 +1,6 @@
-import { request } from 'undici';
 import { STATUS_CODES } from 'http';
+import { request } from 'undici';
+
 import { HttpError } from '@shared/libs/errors/http-error';
 
 export const fetchData = async <T>(url: string): Promise<T> => {

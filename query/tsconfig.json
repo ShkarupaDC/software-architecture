@@ -6,6 +6,7 @@
     "typeRoots": ["./@types"],
     "paths": {
       "@src/*": ["./src/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
       "@plugins/*": ["./src/plugins/*"],
       "@config/*": ["./src/config/*"],
       "@shared/*": ["../shared/*"],

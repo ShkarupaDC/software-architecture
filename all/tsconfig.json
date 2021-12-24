@@ -8,6 +8,7 @@
       "@src/*": ["./src/*"],
       "@plugins/*": ["./src/plugins/*"],
       "@interfaces/*": ["./src/interfaces/*"],
+      "@lib/*": ["./src/lib/*"],
       "@config/*": ["./src/config/*"],
       "@schema/*": ["./src/schema/*"],
       "@shared/*": ["../shared/*"],

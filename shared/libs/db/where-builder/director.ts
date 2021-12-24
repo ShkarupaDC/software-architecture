@@ -6,11 +6,11 @@ import { StringQueryParams } from '../../../interfaces/search/string-query-param
 export class Director {
   constructor(private builder: Builder) {}
 
-  buildStringQuery(field: string, params: StringQueryParams) {
+  private buildStringQuery(field: string, params: StringQueryParams) {
     this.builder.contains(field, params.contains);
   }
 
-  buildNumberQuery(field: string, params: NumberQueryParams) {
+  private buildNumberQuery(field: string, params: NumberQueryParams) {
     this.builder.min(field, params.min).max(field, params.max);
   }
 

@@ -7,7 +7,7 @@
   "scripts": {
     "pre-build": "rm -rf build",
     "build": "yarn pre-build && yarn tsc -p tsconfig.json",
-    "start": "node -r ts-node/register -r tsconfig-paths/register ./build/all/src/server.js | pino-pretty"
+    "start": "node -r ts-node/register -r tsconfig-paths/register ./build/all/src/server.js | pino-pretty -c -t"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

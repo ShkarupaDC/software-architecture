@@ -24,9 +24,17 @@ export class ItemDao {
     return builder.getQuery();
   }
 
-  async getItemsByQuery(query: SearchQuery): Promise<Item[]> {
+  async getByQuery(query: SearchQuery): Promise<Item[]> {
     const rawQuery = this.buildQuery(query);
     const result = await this.db.raw<{ rows: Item[] }>(rawQuery);
     return result.rows;
+  }
+
+  async getPage(page: number, pageSize: number): Promise<Item[]> {
+    const records = await this.db<Item>('items')
+      .select()
+      .limit(pageSize)
+      .offset(pageSize * (page - 1));
+    return records;
   }
 }

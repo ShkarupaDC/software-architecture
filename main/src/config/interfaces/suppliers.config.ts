@@ -1,4 +1,5 @@
 export interface SuppliersConfig {
-  allUrl: string;
-  queryUrl: string;
+  allPriceListUrl: string;
+  querySearchUrl: string;
+  queryPriceListUrl: string;
 }

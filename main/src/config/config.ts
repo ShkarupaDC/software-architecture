@@ -3,6 +3,7 @@ import 'dotenv/config';
 import { ServerConfig } from '@shared/interfaces/config/server';
 import { DBConfig } from '@shared/interfaces/config/db';
 import { SuppliersConfig } from '@config/interfaces/suppliers.config';
+import { AppConfig } from './interfaces/app.config';
 
 export const config = {
   server: {
@@ -18,7 +19,12 @@ export const config = {
     database: process.env.PG_DB,
   } as DBConfig,
   suppliers: {
-    allUrl: process.env.ALL_URL,
-    queryUrl: process.env.QUERY_URL,
+    allPriceListUrl: process.env.ALL_PRICE_LIST_URL,
+    querySearchUrl: process.env.QUERY_SEARCH_URL,
+    queryPriceListUrl: process.env.QUERY_PRICE_LIST_URL,
   } as SuppliersConfig,
+  app: {
+    timezone: process.env.TIMEZONE,
+    numRecords: parseInt(process.env.NUM_RECORDS ?? '', 10),
+  } as AppConfig,
 };

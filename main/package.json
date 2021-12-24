@@ -7,7 +7,7 @@
   "scripts": {
     "pre-build": "rm -rf build",
     "build": "yarn pre-build && yarn tsc -p tsconfig.json",
-    "start": "node -r ts-node/register -r tsconfig-paths/register ./build/main/src/server.js | pino-pretty"
+    "start": "node -r ts-node/register -r tsconfig-paths/register ./build/main/src/server.js | pino-pretty -c -t"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
@@ -15,11 +15,15 @@
     "fastify-autoload": "^3.9.0",
     "fastify-plugin": "^3.0.0",
     "knex": "^0.95.14",
+    "lorem-ipsum": "^2.0.4",
+    "node-cron": "^3.0.0",
     "pg": "^8.7.1",
     "qs": "^6.10.1",
     "undici": "^4.10.2"
   },
   "devDependencies": {
+    "@types/lorem-ipsum": "^2.0.0",
+    "@types/node-cron": "^3.0.0",
     "@types/pg": "^8.6.1",
     "@types/qs": "^6.9.7",
     "pino-pretty": "^7.2.0"

@@ -1,8 +1,12 @@
 import { FastifyPluginAsync } from 'fastify';
 
+import { config } from '@config/config';
+import { delay } from '@lib/delay';
 import { detailedItemSchema } from '@shared/schema/domain/detailed-item';
 import { itemIdSchema } from '@shared/schema/domain/item-id';
 import { priceListSchema } from '@schema/domain/price-list';
+
+const { search } = config.app;
 
 export const routes: FastifyPluginAsync = async (fastify) => {
   const { itemService } = fastify;
@@ -13,8 +17,9 @@ export const routes: FastifyPluginAsync = async (fastify) => {
     schema: {
       response: { 200: priceListSchema },
     },
-    handler: async (request, reply) => {
+    handler: async (_, reply) => {
       const priceList = await itemService.getPriceList();
+      await delay(search.delay);
       reply.code(200).send(priceList);
     },
   });
