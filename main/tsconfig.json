@@ -1,13 +1,13 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "skipLibCheck": true,
     "outDir": "./build",
     "baseUrl": "./",
     "typeRoots": ["./@types"],
     "paths": {
       "@src/*": ["./src/*"],
       "@plugins/*": ["./src/plugins/*"],
-      "@interfaces/*": ["./src/interfaces/*"],
       "@config/*": ["./src/config/*"],
       "@lib/*": ["src/lib/*"],
       "@schema/*": ["./src/schema/*"],

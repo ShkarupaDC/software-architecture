@@ -2,7 +2,7 @@ import { FastifyPluginAsync } from 'fastify';
 
 import { itemIdSchema } from '@shared/schema/domain/item-id';
 import { itemSchema } from '@schema/domain/item';
-import { NewMenuItem } from '@src/interfaces/menu-items/new-item';
+import { NewMenuItem } from '@plugins/menu-item/interfaces/new-item';
 
 export const routes: FastifyPluginAsync = async (fastify) => {
   const { itemService } = fastify;

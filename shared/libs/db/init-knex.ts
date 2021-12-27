@@ -1,5 +1,7 @@
-import { DBConfig } from '../../interfaces/config/db';
 import { Knex } from 'knex';
+
+import { DBConfig } from '../../interfaces/config/db';
+import { camelCaseToSnakeCase, objectToCamelCase } from '../utils/case';
 
 export const getKnexConfig = (dbConfig: DBConfig): Knex.Config => {
   return {
@@ -16,5 +18,7 @@ export const getKnexConfig = (dbConfig: DBConfig): Knex.Config => {
     seeds: {
       directory: './seeds',
     },
+    wrapIdentifier: (value) => camelCaseToSnakeCase(value),
+    postProcessResponse: (result) => objectToCamelCase(result),
   } as Knex.Config;
 };
